@@ -1,0 +1,76 @@
+body {
+  font-family: sans-serif;
+  color: blue;
+  box-sizing: border-box;
+  padding-top: 140px;
+  margin: 0;
+}
+
+/* Menu */
+  
+.navbar-brand {
+  font-family: fantasy;
+  font-size: 3rem;
+  color: blue !important;
+}
+  
+.navbar-nav .nav-link {
+  color: blue;
+  margin-right: 15px;    
+}
+  
+.social-icons a {
+  color: blue;
+  margin-right: 15px;
+}
+  
+/* Hamburger Menu */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+  
+  
+  
+  
+/* Footer */
+  
+footer {
+  text-align: center;
+  padding: 20px;
+  color: blue;
+}
+  
+.footer-logo {
+  font-family: 'Great Vibes';
+  font-size: 3rem;
+  color: blue;
+}
+
+.footer-line {
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+  
+.social-btn {
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  border-radius: 0;
+  background: transparent;
+  color: blue;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-btn:hover {
+  background-color: blue;
+  color: blue;
+}
+  
+.footer-title {
+  color: blue;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
