@@ -28,8 +28,35 @@ body {
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-  
-  
+
+/* Home Page Section */
+
+.home-image{
+  margin-bottom: 15px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.welcome-icon{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+}
+
+.welcome-title{
+  font-family:cursive;
+  font-size: 50px;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  font-weight: bold;
+}
+
+.welcome-text{
+  text-align: center;
+  font-size: 19px;
+}
   
   
 /* Footer */
