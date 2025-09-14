@@ -1,79 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Critter Cove</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
-    <!-- Bootstrap JS & Icons -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critter Cove</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;500&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap JS & Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="bg-white">
-
-    <!-- Header with Responsive Navigation -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-white px-4 py-5 fixed-top flex-column">
-
-            <!-- Top Part -->
-            <div class="container-fluid d-flex justify-content-between align-items-center w-100">
-
-                <!-- Social Icons (hide on small screens) -->
-                <div class="social-icons d-none d-sm-flex">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook text-blue me-3"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram text-blue me-3"></i></a>
-                </div>
-
-                <!-- Brand (always centered & doesn't overlap) -->
-                <div class="mx-auto">
-                    <a class="navbar-brand position-absolute start-50 translate-middle" href="/index.html">CritterCove</a> 
-                </div>
-
-            </div>
-
-            <!-- Hamburger Menu (small screens only) -->
-            <div class="container-fluid d-flex justify-content-center mt-2 d-lg-none">
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-blue" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-blue" href="pethub.html">PetHub</a></li>
-                    <li class="nav-item"><a class="nav-link text-blue" href="trainers.html">Trainers</a></li>
-                    <li class="nav-item"><a class="nav-link text-blue" href="services.html">Services</a></li>        
-                    <li class="nav-item"><a class="nav-link text-blue" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-        </nav>
-    </header>
-    <section class="home">
-      <img class="home-image" src="./img/home-photo.png" id="hero" alt="Hero Image">
-      <div class="welcome-message">
-        <img class="welcome-icon" src="./img/home-icons.png" alt="heart paws">
-      <h1 class="welcome-title">Welcome to CritterCove</h1>       
-      <h6 class="welcome-text">Your pet's second Home and safe space.
-      <br> We value their health, nutrition and hygiene.</h6>
+  <!-- Header with Responsive Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white px-4 py-5 fixed-top flex-column">
+      <!-- Top Part -->
+      <div class="container-fluid d-flex justify-content-between align-items-center w-100">
+        <!-- Social Icons (hide on small screens) -->
+        <div class="social-icons d-none d-sm-flex">
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="bi bi-facebook text-blue me-3"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="bi bi-instagram text-blue me-3"></i>
+          </a>
+        </div>
+        <!-- Brand (always centered & doesn't overlap) -->
+        <div class="mx-auto">
+          <a class="navbar-brand position-absolute start-50 translate-middle" href="/index.html">CritterCove</a>
+        </div>
       </div>
-    </section>
-    
-    <footer>Copyright &copy; All rights reserved. Joanne Costo, Fatima Dossa & Angelica Montano 2025.</footer>
-    
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+      <!-- Hamburger Menu (small screens only) -->
+      <div class="container-fluid d-flex justify-content-center mt-2 d-lg-none">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-black" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="pethub.html">PetHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="trainers.html">Trainers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--HERO SECTION-->>
+  <div class="home-container">
+    <img class="home-image" src="./img/home-photo.png" id="hero" alt="Hero Image">
 
+    <div class="form-overlay" id="form-overlay">
+      <form onsubmit="handleSubmit(event)">
+        <input type="email" id="emailInput" placeholder="Enter your email here" required><br>
+        <button type="submit">Get my Voucher Now!</button>
+      </form>
+    </div>
+  </div>
+  <!--Welcome Section-->>
+  <div class="welcome-message">
+    <img class="welcome-text" src="./img/welcome.png" alt="Welcome message">
+  </div>
+  <!-- Section 1: Image Right, Text Left -->
+  <section class="content-section reverse">
+    <div class="image">
+      <a href="services.html">
+        <img src="./img/home-blogs.jpg" alt="Dog">
+      </a>
+    </div>
+    <div class="text">
+      <h2>Love & Care</h2>
+      <h4>Pet health & Wellness</h4>
+      <h5>“Healthy Pets, Happy Hearts”</h5>
+      <p>
+        We provide expert guidance on nutrition, grooming, and preventive care to keep your pets strong and full of
+        life. With trusted resources and personalized advice, your furry friends get the love and attention they
+        deserve.
+      </p>
+      <a href="services.html" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Section 2: Image Left, Text Right -->
+  <section class="content-section">
+    <div class="image">
+      <a href="services.html">
+        <img src="./img/home-blogs-2.jpg" alt="Cat">
+      </a>
+    </div>
+    <div class="text">
+      <h2>Play & Joy</h2>
+      <h4>Activities & bonding</h4>
+      <h5>“Because Pets Deserve Fun Too”</h5>
+      <p>
+        Thinking about welcoming a new furry (or feathery!) friend into your life? We’re here to guide you every step of
+        the way. From choosing the right pet to understanding their needs, we’ll help you create a loving home where
+        they can thrive. Start your journey to unconditional love and joyful companionship today.
+      </p>
+      <a href="pethub.html" class="btn">Get Your new Buddy Now</a>
+    </div>
+  </section>
+
+  <!-- Section 3: Image Right, Text Left -->
+  <section class="content-section reverse">
+    <div class="image">
+      <a href="services.html">
+        <img src="./img/home-blogs-3.jpg" alt="Bird">
+      </a>
+    </div>
+    <div class="text">
+      <h2>Training & Guidance</h2>
+      <h4>Behavior & obedience training</h4>
+      <h5>“Smart Pets, Happy Owners”</h5>
+      <p>
+        Our expert trainers and resources make learning fun and rewarding for both pets and their humans. Whether it’s
+        teaching commands, improving manners, or overcoming fears, we’re here to guide you every step of the way.
+      </p>
+      <a href="#" class="btn">Meet Our Trainers</a>
+    </div>
+  </section>
+
+  <!-- Section 4: Image Left, Text Right -->
+  <section class="content-section">
+    <div class="image">
+      <a href="services.html">
+        <img src="./img/home-blogs-4.jpg" alt="Hamster">
+      </a>
+    </div>
+    <div class="text">
+      <h2>Community & Support</h2>
+      <h4>Pet owner community & services</h4>
+      <h5>“Together, For Every Pet”</h5>
+      <p>
+        Critter Cove isn’t just a service—it’s a community. Connect with other pet lovers, find trusted services, and
+        share your journey. Because every pet deserves a village of care and compassion.
+      </p>
+      <a href="contact.html" class="btn">Join The Community</a>
+    </div>
+  </section>
+
+
+  <footer>Copyright &copy; All rights reserved. Joanne Costo, Fatima Dossa & Angelica Montano 2025.</footer>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
