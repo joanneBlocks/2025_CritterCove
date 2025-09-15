@@ -5,6 +5,11 @@ body {
   padding-top: 140px;
   margin: 0;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* kills right-side white space */
+}
 
 /* Menu */
   
@@ -28,8 +33,206 @@ body {
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+/* Home Page Section */
+
+.home-container {
+  position: relative;   /* makes overlay position relative to this */
+  display: inline-block;
+  width: 100%;
+}
+
+.home-image {
+  margin-top:100px;
+  width: 100%;
+  height: auto;
+  display: block;       /* prevents weird spacing */
+    z-index: 1;           
+}
+
+.form-overlay {
+  position: absolute;   /* puts it on top of image */
+  top: 80%;             
+  left: 25%;            
+  transform: translate(-50%, -50%);
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 2;           /* make sure it's above the image */
+  max-width: 90%;
+}
+
+.form-overlay input {
+  left: 20%;
+  padding: 8px 12px;
+  width: 300px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin: 10px 10px;
+  font-size: 16px;
+}
+
+.form-overlay button {
+  padding: 8px 16px;
+  background:red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-overlay button:hover {
+  background: #0056b3;
+}
+
+/*Welcome Section*/
+.welcome-icon, .welcome-text{
+  display: block;
+  margin: 0 auto;
   
-  
+}
+.welcome-icon{
+  width: 200px;
+  height: 100px;
+}
+.welcome-text{
+  width: 100%;
+  height: auto;
+}
+
+
+.welcome-title{
+  font-family:cursive;
+  font-size: 50px;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  font-weight: bold;
+}
+
+.welcome-text{
+  text-align: center;
+  font-size: 19px;
+}
+/*Content Section*/
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
+
+.content-section .text {
+  flex: 1;
+}
+
+.content-section .text h2 {
+  font-family: fantasy;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.text h2, .text h4 ,.text h5{
+  color: #131361;
+  }
+
+.content-section .text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.content-section .image {
+  flex: 1;
+}
+
+.content-section .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer; /* shows hand icon */
+}
+.content-section .image a {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.content-section .image a:hover {
+  transform: scale(1.05); /* zooms on hover */
+}
+/* Reverse layout */
+.content-section.reverse {
+  flex-direction: row-reverse;
+  transform: translateX(-100px);
+}
+
+/* General Section Styling */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
+
+/* Reverse layout (image right, text left) */
+.content-section.reverse {
+  flex-direction: row-reverse;
+  transform: translateX(-100px); /* start from left */
+}
+
+/* When visible */
+.content-section.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content-section .image img {
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.content-section .text {
+  max-width: 500px;
+}
+
+
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#007bff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6f9a99;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-section.reverse {
+    flex-direction: column;
+  }
+}
+
   
   
 /* Footer */
