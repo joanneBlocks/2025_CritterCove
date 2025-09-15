@@ -1,6 +1,6 @@
-body {
-  font-family: sans-serif;
-  color: blue;
+body { 
+  font-family: "futura-pt", sans-serif;                                    
+  color: #707070;
   box-sizing: border-box;
   padding-top: 140px;
   margin: 0;
@@ -11,21 +11,46 @@ html, body {
   overflow-x: hidden; /* kills right-side white space */
 }
 
+/* Header Font */
+
+.header-font {
+  font-family: 'MoreSugar', sans-serif; 
+}
+
 /* Menu */
   
 .navbar-brand {
-  font-family: fantasy;
+  font-family: 'MoreSugar', sans-serif;   
   font-size: 3rem;
-  color: blue !important;
+  color: #30c0ff !important;
+  z-index: 5;
 }
   
 .navbar-nav .nav-link {
-  color: blue;
+  color: #707070;
   margin-right: 15px;    
+}
+
+.nav-item {
+  z-index: 10;
+}
+
+.nav-link:hover {
+  background-color: #30c0ff;
+  color: white;
+}
+
+.background-petblue {
+  background-color: #30c0ff;
+  width: 100vw;
+}
+
+.font-petblue {
+  color: #30c0ff;
 }
   
 .social-icons a {
-  color: blue;
+  color:  #30c0ff;
   margin-right: 15px;
 }
   
@@ -90,6 +115,12 @@ html, body {
   display: block;
   margin: 0 auto;
   
+/* Text */
+p {
+  color: #707070;
+  z-index: 10;
+}  
+
 }
 .welcome-icon{
   width: 200px;
@@ -232,7 +263,6 @@ html, body {
     flex-direction: column;
   }
 }
-
   
   
 /* Footer */
@@ -240,13 +270,13 @@ html, body {
 footer {
   text-align: center;
   padding: 20px;
-  color: blue;
+  color: #30c0ff;
 }
   
 .footer-logo {
-  font-family: 'Great Vibes';
+  font-family: "futura-pt", sans-serif;
   font-size: 3rem;
-  color: blue;
+  color: #30c0ff;
 }
 
 .footer-line {
@@ -272,8 +302,12 @@ footer {
   color: blue;
 }
   
-.footer-title {
-  color: blue;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+
+@font-face {
+  font-family: 'MoreSugar'; 
+  src: url('../assets/assets_Joanne/fonts/MoreSugar-Regular.ttf') format('truetype'),
+       url('../assets/assets_Joanne/fonts/MoreSugar-Extras.ttf') format('truetype'),
+       url('../assets/assets_Joanne/fonts/MoreSugar-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
