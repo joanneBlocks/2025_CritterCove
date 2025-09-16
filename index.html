@@ -2,23 +2,77 @@
 <html lang="en">
 
 <head>
-    <!-- Header with Responsive Navigation -->
-    <header>
-        <nav class="navbar bg-white navbar-expand-lg px-4 py-5 fixed-top flex-column">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Critter Cove</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;500&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap JS & Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
 
-            <!-- Top Part -->
-            <div class="container-fluid d-flex justify-content-between align-items-center w-100">
-
-                <!-- Social Icons (hide on small screens) -->
-                <div class="social-icons d-none d-sm-flex">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook text-blue me-3"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram text-blue me-3"></i></a>
-                </div>
-
-                <!-- Brand (always centered & doesn't overlap) -->
-                <div class="mx-auto header-font">
-                    <a class="navbar-brand position-absolute start-50 translate-middle" href="index.html"><img src="assets/assets_Joanne/logo/logo_blue_gray.png" alt="Critter Cove" height="200px"></a> 
-                </div>
+<body class="bg-white">
+  <!-- Header with Responsive Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white px-4 py-5 fixed-top flex-column">
+      <!-- Top Part -->
+      <div class="container-fluid d-flex justify-content-between align-items-center w-100">
+        <!-- Social Icons (hide on small screens) -->
+        <div class="social-icons d-none d-sm-flex">
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="bi bi-facebook text-blue me-3"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="bi bi-instagram text-blue me-3"></i>
+          </a>
+        </div>
+        <!-- Brand (always centered & doesn't overlap) -->
+        <div class="mx-auto">
+          <a class="navbar-brand position-absolute start-50 translate-middle" href="/index.html">CritterCove</a>
+        </div>
+      </div>
+      <!-- Hamburger Menu (small screens only) -->
+      <div class="container-fluid d-flex justify-content-center mt-2 d-lg-none">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-black" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="pethub.html">PetHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="trainers.html">Trainers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--HERO SECTION-->>
+  <div class="home-container">
+    <img class="home-image" src="./img/home-photo.png" id="hero" alt="Hero Image">
 
     <div class="form-overlay" id="form-overlay">
       <form onsubmit="handleSubmit(event)">
@@ -27,10 +81,7 @@
       </form>
     </div>
   </div>
-  <!--Welcome Section-->>
-  <div class="welcome-message">
-    <img class="welcome-text" src="./img/welcome.png" alt="Welcome message">
-  </div>
+  
   <!-- Section 1: Image Right, Text Left -->
   <section class="content-section reverse">
     <div class="image">
@@ -71,7 +122,6 @@
     </div>
   </section>
 
-
   <!-- Section 3: Image Right, Text Left -->
   <section class="content-section reverse">
     <div class="image">
@@ -87,7 +137,7 @@
         Our expert trainers and resources make learning fun and rewarding for both pets and their humans. Whether it’s
         teaching commands, improving manners, or overcoming fears, we’re here to guide you every step of the way.
       </p>
-      <a href="#" class="btn">Meet Our Trainers</a>
+      <a href="trainers.html" class="btn">Meet Our Trainers</a>
     </div>
   </section>
 
@@ -109,32 +159,6 @@
       <a href="contact.html" class="btn">Join The Community</a>
     </div>
   </section>
-
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-center mt-4" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pethub.html">PetHub</a></li>
-                    <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>        
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-        </nav>
-    </header>
-    <div class="input-group mb-3">
-        <input type="text" name="name" id="name" class="form-control" placeholder="placeholder" aria-describedby="suffixId">
-        <span class="input-group-text" id="suffixId">suffix</span>
-    </div>
-    
-
-
-    <footer>Copyright &copy; All rights reserved. Joanne Costo, Fatima Dossa & Angelica Montano 2025.</footer>
-    
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
 
   <footer>Copyright &copy; All rights reserved. Joanne Costo, Fatima Dossa & Angelica Montano 2025.</footer>
