@@ -246,6 +246,9 @@ if (container) {
     container.appendChild(section);
   });
 }
+
+// Add to Cart
+
 const cart = [];
 
 function addToCart(pet) {
@@ -257,28 +260,80 @@ function renderCart() {
   const cartItems = document.getElementById("cartItems");
   const cartTotal = document.getElementById("cartTotal");
 
+  if (!cartItems || !cartTotal) return;
+
   cartItems.innerHTML = "";
 
   let total = 0; // local total
   cart.forEach((item, index) => {
     const li = document.createElement("li");
     li.className = "list-group-item d-flex justify-content-between align-items-center";
-    li.textContent = item.name;
+    
+    const nameSpan = document.createElement("span");
+    nameSpan.textContent = item.name;
+    li.appendChild(nameSpan);
 
     const removeBtn = document.createElement("button");
-    removeBtn.type = "button";
-    removeBtn.textContent = "Remove";
+    removeBtn.type = "button"; // prevents form submit
     removeBtn.className = "btn btn-sm btn-danger";
+    removeBtn.textContent = "Remove";
     removeBtn.addEventListener("click", () => removeFromCart(index));
-
     li.appendChild(removeBtn);
+
     cartItems.appendChild(li);
 
-    // Add to total as we loop
-    total += parseInt(item.price.replace(/[^0-9]/g, ""));
+    // parse price to number (handles commas and currency symbols)
+    const num = Number(String(item.price).replace(/[^0-9.-]/g, "")) || 0;
+    total += num;
   });
 
   cartTotal.textContent = `Total: ₱${total.toLocaleString()}`;
+}
+// remove item and re-render
+function removeFromCart(index) {
+  if (index < 0 || index >= cart.length) return;
+  cart.splice(index, 1);
+  renderCart();
+}
+
+// ======= CHECKOUT (robust) =======
+function doCheckout() {
+  if (cart.length === 0) {
+    alert("Your cart is empty. Add items first!");
+    return;
+  }
+
+  // compute total fresh from cart (safe and accurate)
+  const total = cart.reduce((sum, item) => {
+    return sum + (Number(String(item.price).replace(/[^0-9.-]/g, "")) || 0);
+  }, 0);
+
+  // show confirmation (replace with modal/inline message if you prefer)
+  alert(`🎉 Congratulations! You have purchased your items for a total of ₱${total.toLocaleString()}!`);
+
+  // clear cart and re-render
+  cart.length = 0;
+  renderCart();
+}
+
+// safe attachment of checkout button listener (works whether button exists now or later)
+function attachCheckoutHandler() {
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  if (checkoutBtn) {
+    checkoutBtn.type = "button";
+    checkoutBtn.addEventListener("click", doCheckout);
+  } else {
+    // if button not in DOM yet, attach once DOM is ready
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("checkoutBtn");
+      if (btn) {
+        btn.type = "button";
+        btn.addEventListener("click", doCheckout);
+      } else {
+        console.warn("checkoutBtn not found in DOM.");
+      }
+    });
+  }
 }
 
 // Search Function
@@ -307,6 +362,6 @@ document.getElementById("petSearch").addEventListener("input", e => {
   });
 });
 
-
+attachCheckoutHandler();
 
 
