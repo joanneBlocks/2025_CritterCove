@@ -231,6 +231,10 @@ html, body {
   font-family: 'MoreSugar', sans-serif; 
   color: #30C0FF;
 }
+#checkoutBtn {
+  padding: 6px 16px;  /* tweak size */
+  font-size: 0.9rem;
+}
 
 .title h1 {
   margin: 0 0 0.5rem;

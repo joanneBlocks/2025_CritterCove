@@ -72,11 +72,19 @@
         <h1>🐾 CritterCove's Pet Store 🐾</h1>
         <p>Find your perfect companion today!</p>
     </section>
+
     <section id="cart" class="container my-5">
         <h2>Your Cart</h2>
         <ul id="cartItems" class="list-group mb-3"></ul>
-        <p id="cartTotal" class="fw-bold">Total: ₱0</p>
+
+        <!-- Flex row for total + checkout -->
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <p id="cartTotal" class="fw-bold mb-0">Total: ₱0</p>
+            <button id="checkoutBtn" class="btn btn-success btn-sm">Checkout</button>
+        </div>
     </section>
+
+
 
     <!--Search -->
     <div class="container my-4">
