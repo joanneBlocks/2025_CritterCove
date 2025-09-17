@@ -12,6 +12,14 @@ html, body {
   overflow-x: hidden; /* kills right-side white space */
 }
 
+.left-side-margin {
+  margin: 20px;
+}
+
+.right-side-margin {
+  margin: 20px;
+}
+
 /* Header Font */
 
 .header-font {
@@ -267,6 +275,47 @@ h1 h2 h3 h4 h5 h6 {
 .no-design {
   text-decoration: none;
   list-style-type: none;
+}
+
+.custom-text-color {
+  color: #30c0ff;
+}
+
+.background-blue {
+  background-color: #30c0ff;
+}
+
+.background-green {
+  background-color: #30C586;
+}
+
+.background-orange {
+  background-color: #FF9445;
+}
+
+.background-pink {
+  background-color: #FACED9;
+}
+
+.background-yellow {
+  background-color: #FFDE5F;
+}
+
+.background-beige {
+  background-color: #ECD8BF;
+}
+
+.background-black {
+  background-color: #1E1A1B; 
+}
+
+.background-gray {
+  background-color: #707070;
+}
+
+.card-transparent-border {
+  background-color: transparent;
+  border-color: #ffffff;
 }
 
 /* Responsive layout */
