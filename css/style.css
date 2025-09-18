@@ -112,21 +112,21 @@ html, body {
 }
 
 /*Content Section*/
-.content-section .text {
+.content-section .text-main {
   flex: 1;
 }
 
-.content-section .text h2 {
+.content-section .text-main h2 {
   font-family:'MoreSugar', sans-serif; 
   font-size: 2rem;
   margin-bottom: 15px;
   font-weight: bold;
 }
-.text h2, .text h4 ,.text h5{
+.text-main h2, .text-main h4 ,.text-main h5{
   color: #30C0FF;
   }
 
-.content-section .text p {
+.content-section .text-main p {
   text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
@@ -187,7 +187,7 @@ html, body {
   border-radius: 12px;
 }
 
-.content-section .text {
+.content-section .text-main{
   max-width: 500px;
 }
 
