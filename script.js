@@ -80,7 +80,7 @@ const petsData = {
       name: "Siamese",
       img: "./img/Siamese kitten.jpg",
       description: "Siamese cats are sleek, elegant, and extremely social. Known for their striking blue almond-shaped eyes.",
-      price: "₱8,500"
+      price: "$148"
     },
     {
       name: "British Short Hair",
