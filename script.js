@@ -54,19 +54,19 @@ const petsData = {
       name: "Golden Retriever",
       img: "./img/golden.jpg",
       description: "Friendly, loyal, and intelligent, Golden Retrievers are one of the most popular family dogs. They are great with children, easy to train, and love outdoor activities and exercise.",
-      price: "₱25,000"
+      price: "$499.99"
     },
     {
       name: "Shih-tzu",
       img: "./img/shitzu.jpg",
       description: "A small, affectionate, and friendly toy breed with a long, flowing coat. Known for being great companions, Shih Tzus are playful, gentle, and perfect for families or apartment living.",
-      price: "₱12,000"
+      price: "$210"
     },
     {
       name: "White Husky",
       img: "./img/husky.jpg",
       description: "A rare, pure-white variation of the Siberian Husky with a thick snow-colored coat and piercing blue or heterochromatic eyes. Loyal, and energetic—requires daily exercise.",
-      price: "₱20,000"
+      price: "$350"
     }
   ],
   cats: [
@@ -74,19 +74,19 @@ const petsData = {
       name: "Persian Cat",
       img: "./img/persian cat.jpg",
       description: "Long-haired and elegant, Persian Cats are known for their calm and gentle temperament. ",
-      price: "₱10,000"
+      price: "$175"
     },
     {
       name: "Siamese",
       img: "./img/Siamese kitten.jpg",
       description: "Siamese cats are sleek, elegant, and extremely social. Known for their striking blue almond-shaped eyes.",
-      price: "₱8,500"
+      price: "$148"
     },
     {
       name: "British Short Hair",
       img: "./img/british.png",
       description: "A calm and affectionate cat known for its plush, dense coat and round, chubby cheeks.",
-      price: "₱12,000"
+      price: "$150"
     }
   ],
   birds: [
@@ -94,19 +94,19 @@ const petsData = {
       name: "Parrot",
       img: "./img/parrot.jpg",
       description: "Colorful and playful, can learn words and tricks.",
-      price: "₱5,000"
+      price: "$88"
     },
     {
       name: "Canary",
       img: "./img/Canary.jpg",
       description: "Beautiful songbird with bright plumage.",
-      price: "₱4,000"
+      price: "$100"
     },
     {
       name: "Love Birds",
       img: "./img/lovebirds.jpg",
       description: "Famous for their strong pair bonds and playful personalities.",
-      price: "₱1,000"
+      price: "$20"
     }
   ],
   rabbits: [
@@ -114,19 +114,19 @@ const petsData = {
       name: "Dutch Rabbit",
       img: "./img/Dutch Rabbit baby.jpg",
       description: "A gentle and affectionate rabbit breed recognized by its distinctive white blaze and saddle contrasted with black, brown, or gray fur. Dutch Rabbits are calm, and friendly",
-      price: "₱3,500"
+      price: "$62"
     },
     {
       name: "Mini Rex",
       img: "./img/minirex.jpg",
       description: "Famous for its incredibly soft, velvety fur and calm, friendly nature.This medium-small breed usually weighs 3.5–4.5 lbs and comes in many beautiful colors.",
-      price: "₱3,200"
+      price: "$56"
     },
     {
       name: "Netherland Dwarf ",
       img: "./img/netherland.jpg",
       description: "One of the smallest rabbit breeds, weighing only 1–2.5 lbs. Known for its compact body, short ears, and big expressive eyes, this bunny is playful yet can be a bit shy at first.",
-      price: "₱12,000"
+      price: "$200"
     }
   ],
   hamsters: [
@@ -134,19 +134,19 @@ const petsData = {
       name: "Syrian Hamster",
       img: "./img/Syrian Hamster baby.jpg",
       description: "Also called the Golden Hamster, this friendly, solitary pet is known for its teddy-bear look and easy handling. Syrians grow 5–7 inches long and need their own cage.",
-      price: "₱500"
+      price: "$10"
     },
     {
       name: "Guine Pigs",
       img: "./img/guine.jpg",
       description: "Sociable and vocal little companions that thrive in pairs or groups. Guinea pigs enjoy daily handling, fresh veggies, and roomy cages with plenty of hay.",
-      price: "₱500"
+      price: "$10"
     },
     {
       name: "Dwarf Hamster",
       img: "./img/white.jpg",
       description: "Round dwarf hamster that can change its coat to a snowy white in winter. Typically 3–4 inches long, these hamsters are gentle, relatively easy to tame.",
-      price: "₱6,000"
+      price: "$105"
     }
   ],
   fish: [
@@ -154,19 +154,19 @@ const petsData = {
       name: "Koi",
       img: "./img/koi.jpg",
       description: "Colorful ornamental carp prized for their vibrant patterns and graceful swimming. Koi can live for decades in large outdoor ponds and symbolize good fortune in many cultures.",
-      price: "₱1,200"
+      price: "$25"
     },
     {
       name: "Betta",
       img: "./img/betta.jpg",
       description: "Also called Siamese fighting fish, Bettas are famous for their flowing fins and brilliant colors. They are hardy and can live in small aquariums but prefer warm, clean water.",
-      price: "₱900"
+      price: "$16"
     },
     {
       name: "Arwana",
       img: "./img/arwana.jpg",
       description: "A prized freshwater fish known for its sleek, metallic scales and graceful swimming. Arowanas can grow 2–3 feet long and require large, well-filtered aquariums.",
-      price: "₱2,000"
+      price: "$35"
     }
   ]
 };
@@ -309,7 +309,7 @@ function doCheckout() {
   }, 0);
 
   // show confirmation (replace with modal/inline message if you prefer)
-  alert(`🎉 Congratulations! You have purchased your items for a total of ₱${total.toLocaleString()}!`);
+  alert(`🎉 Congratulations! You have purchased your items for a total of $${total.toLocaleString()}!`);
 
   // clear cart and re-render
   cart.length = 0;
@@ -362,11 +362,33 @@ document.getElementById("petSearch").addEventListener("input", e => {
   });
 });
 
+
+/* Back to Top */
+
+// Get the button
+let mybutton = document.getElementById("backToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 attachCheckoutHandler();
 
-// ==========================
+
 // CONTACT FORM VALIDATION
-// ==========================
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const messageContainer = document.getElementById("messageContainer");
@@ -393,6 +415,7 @@ document.addEventListener("DOMContentLoaded", function () {
         errors.push("Last name is required.");
       }
 
+
       // Email validation
       if (email === "") {
         errors.push("Email is required.");
@@ -418,3 +441,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
