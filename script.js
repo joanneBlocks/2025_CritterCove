@@ -364,4 +364,57 @@ document.getElementById("petSearch").addEventListener("input", e => {
 
 attachCheckoutHandler();
 
+// ==========================
+// CONTACT FORM VALIDATION
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const messageContainer = document.getElementById("messageContainer");
 
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get field values
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      let errors = [];
+
+      // First name validation
+      if (firstName === "") {
+        errors.push("First name is required.");
+      }
+
+      // Last name validation
+      if (lastName === "") {
+        errors.push("Last name is required.");
+      }
+
+      // Email validation
+      if (email === "") {
+        errors.push("Email is required.");
+      } else if (!/\S+@\S+\.\S+/.test(email)) {
+        errors.push("Please enter a valid email address.");
+      }
+
+      // Message validation
+      if (message === "") {
+        errors.push("Message cannot be empty.");
+      }
+
+      // Show feedback
+      if (errors.length > 0) {
+        messageContainer.innerHTML =
+          '<div class="alert alert-danger">' + errors.join("<br>") + "</div>";
+      } else {
+        messageContainer.innerHTML =
+          '<div class="alert alert-success">Form submitted successfully!</div>';
+
+        form.reset();
+      }
+    });
+  }
+});
